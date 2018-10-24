@@ -16,7 +16,7 @@ function createQuote($text, $author) {
     $statement = $dbConn->prepare($sql); 
     
     $statement->execute(); 
-    header('Location: index.php'); 
+    header('Location: midterm.php'); 
 } 
 
 
