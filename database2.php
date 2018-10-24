@@ -12,10 +12,10 @@ function getDatabaseConnection($dbname) {
     //mysql://bb108e997bcdab:7b071f8b@us-cdbr-iron-east-05.cleardb.net/heroku_3d24ca78bc82e88?reconnect=true
     
     
-    // $host = "us-cdbr-iron-east-05.cleardb.net";
-    // $username = "bb108e997bcdab";
-    // $password = "7b071f8b";
-    // $dbname = "heroku_3d24ca78bc82e88"; 
+    $host = "us-cdbr-iron-east-05.cleardb.net";
+    $username = "bb108e997bcdab";
+    $password = "7b071f8b";
+    $dbname = "heroku_3d24ca78bc82e88"; 
     
     
     
