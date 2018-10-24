@@ -1,12 +1,15 @@
 <?php
 
-include 'database.php';
+include 'database2.php';
+
+
+$dbConn = getDatabaseConnection('quotes_v2'); 
 
 
 function createQuote($text, $author) {
-    $dbConn = getDatabaseConnection(); 
+    global $dbConn; 
     
-    $sql = "INSERT INTO `quotes` (`id`, `text`, `author`, `create_date`) VALUES (NULL, '$text', '$author', NOW());";
+    $sql = "INSERT INTO `q_quotes` (`quoteid`, `quote`, `author`, `num_likes`) VALUES (NULL, '$text', '$author', 0);";
     
     //echo "sql: $sql <br/>"; 
     

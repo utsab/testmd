@@ -1,12 +1,15 @@
 <?php
 
-include 'database.php';
+include 'database2.php';
+
+
+$dbConn = getDatabaseConnection('quotes_v2'); 
 
 
 function getRandomQuote() {
-    $dbConn = getDatabaseConnection(); 
+    global $dbConn; 
     
-    $sql = "SELECT * from quotes";  
+    $sql = "SELECT * from q_quotes";  
     
 
     $statement = $dbConn->prepare($sql); 
@@ -41,14 +44,13 @@ $randomQuote = getRandomQuote();
         
     </head>
     <body>
-        <h1><?= $randomQuote['text'] ?></h1>
+        <h1><?= $randomQuote['quote'] ?></h1>
         <h2>-<?= $randomQuote['author'] ?></h2>
         
         <br/>
         <br/>
         <br/>
         
-        <a href="search.php">Search</a>
         <a href="create.php">Create</a>
         
     </body>
